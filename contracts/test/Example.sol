@@ -25,7 +25,7 @@ contract Example is Console {
     }
 
     string greeting = "what's up dude?";
-    function sayHello(string memory words) public returns(string memory){ // 函数设置返回值 returns
+    function sayHello(string memory words) public pure returns(string memory){ // 函数设置返回值 returns
         return words;
     }
 
