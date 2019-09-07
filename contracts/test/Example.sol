@@ -15,17 +15,17 @@ contract Example is Console {
 
     Person satoshi = Person(172, "Satoshi"); // 创建一个新的person
 
-    function eatHamburger(string _name, uint _num) private {
+    function eatHamburger(string memory _name, uint _num) private {
     }
-    eatHamburger("vitalik buterlin", 100);
+    // eatHamburger("vitalik", 100);
 
     uint[] numbers;
-    function _addToArray(int number) private { // 定义私有函数，默认为公共函数，其他合约也可以访问你的方法，所以比较危险，最好设置为私有
+    function _addToArray(uint number) private { // 定义私有函数，默认为公共函数，其他合约也可以访问你的方法，所以比较危险，最好设置为私有
         numbers.push(number);
     }
 
-    string greeting = "what's up dude?"
-    function sayHello(string words) public returns(string){ // 函数设置返回值 returns
+    string greeting = "what's up dude?";
+    function sayHello(string memory words) public returns(string memory){ // 函数设置返回值 returns
         return words;
     }
 
