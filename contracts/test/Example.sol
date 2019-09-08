@@ -15,7 +15,9 @@ contract Example is Console {
 
     Person satoshi = Person(172, "Satoshi"); // 创建一个新的person
 
-    function eatHamburger(string memory _name, uint _num) private {
+    function eatHamburger(string memory _name, uint _num) private pure returns(string memory) {
+        // string memory rtn = _name.toSlice().concat(_num.toSlice);
+        return _name;
     }
     // eatHamburger("vitalik", 100);
 
