@@ -23,7 +23,8 @@ contract Purchase{
     // 函数修改器，保证条件 `_condition` 正确，下划线 `_` 代表调用修改器的函数体
     modifier condition(bool _condition){
         require(
-            _condition
+            _condition,
+            "Not satisfy the condition."
         );
         _;
     }
@@ -50,7 +51,6 @@ contract Purchase{
     }
 
     // 事件定义，等待emit，实现js与智能合约的交互
-    
     // 放弃购买
     event Aborted();
     // 购买确认
